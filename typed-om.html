@@ -1,0 +1,74 @@
+<style>
+    .foo {
+        vertical-align: baseline;
+        transform: translateX(1em) rotate(50deg) skewX(10deg);
+        width: calc(100% - 3em);
+    }
+</style>
+
+<div class="foo"></div>
+
+<script>
+    // CSS Typed Object Model (Typed OM)
+
+    const foo = document.querySelector('.foo');
+
+    // Set opacity value as a number
+    foo.style.opacity = 0.75;
+    
+    // When read, the value is a string
+    console.log(foo.style.opacity);
+    console.log(typeof foo.style.opacity);
+
+    // With attributeStyleMap we can get styles as JS objects (subclasses of CSSStyleValue)
+    const attr = foo.attributeStyleMap;
+
+    // Returns a CSSUnitValue with value and unit properties
+    console.log(attr.get('opacity'));
+    
+    // With computedStyleMap() we can get computed styles in addition to attribute styles
+    const computed = foo.computedStyleMap();
+
+    // This works the same as above
+    console.log(computed.get('opacity'));
+
+    // Returns a CSSKeywordValue
+    console.log(computed.get('vertical-align'));
+
+    // Returns a CSSTransformValue
+    console.log(computed.get('transform'));
+
+    // Returns a CSSMathSum
+    console.log(computed.get('width'));
+
+    // You can also read values from stylesheets as JS objects
+    const stylesheet = document.styleSheets[0];
+    console.log(stylesheet.cssRules[0].selectorText);
+    console.log(stylesheet.cssRules[0].styleMap.get('vertical-align'));
+
+    // There are factory methods for creating CSS values
+    attr.set('padding-left', CSS.percent(10));
+    console.log(attr.get('padding-left'));
+
+    // Feature detection
+    if (window.CSS) {
+        console.log('Typed OM supported, hurrah!')
+    }
+    
+    // Why?
+    // - Better performance, no string conversions needed
+    // - Easier to use
+
+    // Support
+    // - Shipped in Chrome, Opera and Samsung Internet
+    // - Intent to implement in Firefox
+    // - In development in Safari
+
+    // More info:
+    // https://ishoudinireadyyet.com/
+    // http://houdini.glitch.me/typed-om
+    // https://medium.com/norigintech/playing-with-houdini-css-part-two-typed-om-4ce39e2479dc
+    // https://developers.google.com/web/updates/2018/03/cssom
+    // https://www.w3.org/TR/css-typed-om-1/
+
+</script>
