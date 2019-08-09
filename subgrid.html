@@ -1,0 +1,80 @@
+<style>
+    body {
+        background: #ddd;
+        font-family: -apple-system, sans-serif;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+    }
+
+    .card {
+        background: white;
+        grid-template-rows: subgrid; /* Use parent grid for rows */
+        display: grid;
+        grid-row-end: span 2; /* Span two rows of parent grid */
+        grid-gap: 0; /* Don't show a gap inside card */
+    }
+
+    .card-top {
+        background: deeppink;
+        color: white;
+    }
+
+    .card-top,
+    .card-bottom {
+        padding: .5rem 1rem;
+    }
+</style>
+
+<div class="grid">
+    <div class="card">
+        <div class="card-top">Title</div>
+        <div class="card-bottom">Card text</div>
+    </div>
+    <div class="card">
+        <div class="card-top">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi risus tortor, bibendum nec
+            eros nec, maximus vestibulum ipsum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur
+            ridiculus mus. Sed a tortor porttitor, pellentesque risus quis, posuere ipsum. Sed ligula leo, imperdiet id
+            aliquam gravida, scelerisque quis lacus. Etiam lobortis quis tortor a ultricies. Mauris a congue erat. Morbi
+            cursus fermentum enim. Pellentesque in augue vehicula, volutpat eros in, tincidunt diam.</div>
+        <div class="card-bottom">Card text</div>
+    </div>
+    <div class="card">
+        <div class="card-top">Integer mattis finibus justo ac imperdiet. Fusce maximus purus eget venenatis tristique.
+            Phasellus malesuada tortor justo, lacinia aliquam risus consequat nec. Phasellus nisl nibh, eleifend a quam
+            et, egestas malesuada lorem. Donec consectetur tortor eu libero commodo gravida a vitae est. Sed aliquet eu
+            leo ac elementum. Donec elementum magna magna, eu consectetur massa tristique et. Quisque at metus enim.
+            Maecenas pellentesque ultricies interdum. Nunc dapibus viverra aliquet.</div>
+        <div class="card-bottom">Card text</div>
+    </div>
+    <div class="card">
+        <div class="card-top">Title</div>
+        <div class="card-bottom">
+            Nam convallis a lorem ac iaculis. Integer at tincidunt quam. Fusce sed sem vehicula, aliquet enim eu,
+            pulvinar nulla. Nulla id sagittis dolor. Cras quis vestibulum nisl, sed ultricies diam. Sed placerat
+            volutpat pulvinar. Fusce luctus laoreet vestibulum. Vivamus sodales congue auctor. Vestibulum ante ipsum
+            primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla sed nisl rhoncus, hendrerit diam et,
+            faucibus dui. Fusce quam enim, venenatis quis ultricies semper, vulputate vitae ligula. Interdum et
+            malesuada fames ac ante ipsum primis in faucibus. Integer vitae neque finibus, finibus augue et, porttitor
+            urna. Nulla facilisi. Integer in urna auctor, blandit risus sit amet, pharetra sem. Praesent pharetra
+            suscipit semper.</div>
+    </div>
+</div>
+
+<script>
+    // CSS Grid Layout Module Level 2 (CSS Subgrid)
+
+    // Support
+    // - Available in Firefox nightly (v69)
+    // - Not available in any other browser
+
+    // More info:
+    // https://caniuse.com/#feat=css-subgrid
+    // https://www.smashingmagazine.com/2018/07/css-grid-2/
+    // https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid
+    // https://www.w3.org/TR/css-grid-2/
+
+</script>
