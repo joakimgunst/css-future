@@ -1,29 +1,55 @@
 <style>
     body {
-        /* direction: rtl; */
-        /* writing-mode: vertical-lr */
+        font-family: Lato, sans-serif;
+        overflow: hidden;
+        direction: rtl;
+        writing-mode: horizontal-tb;
     }
 
     .foo {
         background: deeppink;
+        color: white;
+        padding: 1rem;
+        width: 15rem;
+        height: 10rem;
+        border-left: 1rem solid darkviolet;
+        margin-bottom: 1rem;
+    }
+
+    .bar {
+        background: orange;
+        position: absolute;
+        padding: 1rem;
+        width: 10rem;
+        height: 5rem;
+        inset-block-start: 10rem;
+        inset-inline-end: 5rem;
+    }
+
+    /* .foo {
+        background: deeppink;
+        color: white;
+        padding: 1rem;
         inline-size: 15rem;
         block-size: 10rem;
+        border-inline-start: 1rem solid darkviolet;
         margin-block-end: 1rem;
     }
 
     .bar {
         background: orange;
         position: absolute;
+        padding: 1rem;
         inline-size: 10rem;
         block-size: 5rem;
         inset-block-start: 10rem;
         inset-inline-end: 5rem;
-    }
+    } */
 </style>
 
-<div class="foo"></div>
-<div class="foo"></div>
-<div class="bar"></div>
+<div class="foo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id justo rhoncus, fermentum neque nec, molestie mi. Maecenas tempus consectetur lacus at rutrum. Cras ut arcu id ante ornare vulputate. Aliquam at scelerisque ligula.</div>
+<div class="foo">Nam bibendum sed augue et molestie. Suspendisse pulvinar risus rutrum dolor aliquam posuere. Quisque ut quam tellus. Aliquam consectetur, tellus ut pharetra imperdiet, odio nisi auctor orci, nec euismod velit odio vitae urna.</div>
+<div class="bar">Vivamus consectetur ex molestie nisi aliquam, porttitor lobortis dui iaculis.</div>
 
 <script>
     // CSS Logical Properties
