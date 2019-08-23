@@ -1,3 +1,24 @@
+<title>Paint API</title>
+
+<!--
+    - Part of Houdini
+    - Allows programmatic access to CSS rendering using paint worklets
+
+    More info:
+    https://developers.google.com/web/updates/2018/01/paintapi
+    https://ishoudinireadyyet.com/
+    https://github.com/GoogleChromeLabs/css-paint-polyfill
+    https://css-houdini.rocks/corner-shape
+    https://googlechromelabs.github.io/houdini-samples/paint-worklet/qr-code/
+
+    Browser support:
+    - Chrome
+    - Opera
+    - Intent to implement in Firefox
+    - In development 
+    - Not Edge
+-->
+
 <style>
     body {
         display: flex;
@@ -18,8 +39,6 @@
 <div class="foo"></div>
 
 <script>
-    // CSS Paint API
-
     // Register custom property so that it's value can be read in worklet
     CSS.registerProperty({
         name: '--scoop-border-radius',
@@ -30,18 +49,4 @@
 
     // Register paint worklet for scoop borders
     CSS.paintWorklet.addModule('./worklets/scoop-border.js');
-
-    // More info:
-    // https://developers.google.com/web/updates/2018/01/paintapi
-    // https://ishoudinireadyyet.com/
-    // https://github.com/GoogleChromeLabs/css-paint-polyfill
-    // https://css-houdini.rocks/corner-shape
-    // https://googlechromelabs.github.io/houdini-samples/paint-worklet/qr-code/
-
-    // Browser support:
-    // - Chrome
-    // - Opera
-    // - Intent to implement in Firefox
-    // - In development 
-    // - Not Edge
 </script>

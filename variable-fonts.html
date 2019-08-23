@@ -1,3 +1,32 @@
+<title>Variable Fonts</title>
+
+<!--
+    - Fonts whose parameters can be set in CSS
+    - The OpenType specification defiens five axes: weight, width, slant, italic and optical sizing
+    - The available axes depend on the font, weight is most common
+    - Some fonts also have custom axes that can do anything the font designer comes up with
+
+    Benefits:
+    - Decreases the amount of data that needs to be downloaded if e.g. multiple weights are needed
+    - Allows for animations and other cool stuff
+
+    More info:
+    https://caniuse.com/#feat=variable-fonts
+    https://developers.google.com/web/fundamentals/design-and-ux/typography/variable-fonts/
+    https://v-fonts.com/
+    https://developer.mozilla.org/en-US/docs/Web/CSS/font-variation-settings
+    https://www.typenetwork.com/brochure/decovar-a-decorative-variable-font-by-david-berlow
+    https://docs.microsoft.com/en-gb/typography/opentype/spec/dvaraxisreg
+    https://www.typenetwork.com/brochure/decovar-a-decorative-variable-font-by-david-berlow
+
+    Browser support:
+    - Firefox
+    - Chrome
+    - Safari
+    - Edge
+    - Not IE
+-->
+
 <style>
     @font-face {
         font-family: 'IBM Plex Sans';
@@ -42,31 +71,3 @@
 </style>
 
 <div class="font">Variable fonts are <i>very</i> nice.</div>
-
-<script>
-    // Variable fonts
-    // - Fonts whose parameters can be set in CSS
-    // - The OpenType specification defiens five axes: weight, width, slant, italic and optical sizing
-    // - The available axes depend on the font, weight is most common
-    // - Some fonts also have custom axes that can do anything the font designer comes up with
-
-    // Benefits:
-    // - Decreases the amount of data that needs to be downloaded if e.g. multiple weights are needed
-    // - Allows for animations and other cool stuff
-
-    // More info:
-    // https://caniuse.com/#feat=variable-fonts
-    // https://developers.google.com/web/fundamentals/design-and-ux/typography/variable-fonts/
-    // https://v-fonts.com/
-    // https://developer.mozilla.org/en-US/docs/Web/CSS/font-variation-settings
-    // https://www.typenetwork.com/brochure/decovar-a-decorative-variable-font-by-david-berlow
-    // https://docs.microsoft.com/en-gb/typography/opentype/spec/dvaraxisreg
-    // https://www.typenetwork.com/brochure/decovar-a-decorative-variable-font-by-david-berlow
-
-    // Browser support:
-    // - Firefox
-    // - Chrome
-    // - Safari
-    // - Edge
-    // - Not IE
-</script>

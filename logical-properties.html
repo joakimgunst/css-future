@@ -1,8 +1,25 @@
+<title>Logical Properties</title>
+
+<!--
+    - Traditional css properties (top, left etc.) assume vertical left-to-right writing
+    - Logical properties supporting languages that are written right-to-left or in a horizontal direction 
+
+    More info:
+    https://caniuse.com/#feat=css-logical-props
+    https://medium.com/@elad/new-css-logical-properties-bc6945311ce7
+
+    Browser support:
+    - Firefox
+    - Chrome
+    - Safari
+    - Not Edge
+-->
+
 <style>
     body {
         font-family: Lato, sans-serif;
         overflow: hidden;
-        direction: rtl;
+        direction: ltr;
         writing-mode: horizontal-tb;
     }
 
@@ -47,20 +64,10 @@
     } */
 </style>
 
-<div class="foo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id justo rhoncus, fermentum neque nec, molestie mi. Maecenas tempus consectetur lacus at rutrum. Cras ut arcu id ante ornare vulputate. Aliquam at scelerisque ligula.</div>
-<div class="foo">Nam bibendum sed augue et molestie. Suspendisse pulvinar risus rutrum dolor aliquam posuere. Quisque ut quam tellus. Aliquam consectetur, tellus ut pharetra imperdiet, odio nisi auctor orci, nec euismod velit odio vitae urna.</div>
+<div class="foo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id justo rhoncus, fermentum neque nec,
+    molestie mi. Maecenas tempus consectetur lacus at rutrum. Cras ut arcu id ante ornare vulputate. Aliquam at
+    scelerisque ligula.</div>
+<div class="foo">Nam bibendum sed augue et molestie. Suspendisse pulvinar risus rutrum dolor aliquam posuere. Quisque ut
+    quam tellus. Aliquam consectetur, tellus ut pharetra imperdiet, odio nisi auctor orci, nec euismod velit odio vitae
+    urna.</div>
 <div class="bar">Vivamus consectetur ex molestie nisi aliquam, porttitor lobortis dui iaculis.</div>
-
-<script>
-    // CSS Logical Properties
-
-    // More info:
-    // https://caniuse.com/#feat=css-logical-props
-    // https://medium.com/@elad/new-css-logical-properties-bc6945311ce7
-
-    // Browser support:
-    // - Firefox
-    // - Chrome
-    // - Safari
-    // - Not Edge
-</script>

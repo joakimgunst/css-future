@@ -1,3 +1,23 @@
+<title>Typed Object Model</title>
+
+<!--
+    - Typed CSS values in JavaScript
+    - Better performance, no string conversions needed
+    - Easier to use
+
+    Support
+    - Shipped in Chrome, Opera and Samsung Internet
+    - Intent to implement in Firefox
+    - In development in Safari
+
+    More info:
+    https://ishoudinireadyyet.com/
+    http://houdini.glitch.me/typed-om
+    https://medium.com/norigintech/playing-with-houdini-css-part-two-typed-om-4ce39e2479dc
+    https://developers.google.com/web/updates/2018/03/cssom
+    https://www.w3.org/TR/css-typed-om-1/
+-->
+
 <style>
     .foo {
         vertical-align: baseline;
@@ -9,13 +29,11 @@
 <div class="foo"></div>
 
 <script>
-    // CSS Typed Object Model (Typed OM)
-
     const foo = document.querySelector('.foo');
 
     // Set opacity value as a number
     foo.style.opacity = 0.75;
-    
+
     // When read, the value is a string
     console.log(foo.style.opacity);
     console.log(typeof foo.style.opacity);
@@ -25,7 +43,7 @@
 
     // Returns a CSSUnitValue with value and unit properties
     console.log(attr.get('opacity'));
-    
+
     // With computedStyleMap() we can get computed styles in addition to attribute styles
     const computed = foo.computedStyleMap();
 
@@ -54,21 +72,4 @@
     if (window.CSS) {
         console.log('Typed OM supported, hurrah!')
     }
-    
-    // Why?
-    // - Better performance, no string conversions needed
-    // - Easier to use
-
-    // Support
-    // - Shipped in Chrome, Opera and Samsung Internet
-    // - Intent to implement in Firefox
-    // - In development in Safari
-
-    // More info:
-    // https://ishoudinireadyyet.com/
-    // http://houdini.glitch.me/typed-om
-    // https://medium.com/norigintech/playing-with-houdini-css-part-two-typed-om-4ce39e2479dc
-    // https://developers.google.com/web/updates/2018/03/cssom
-    // https://www.w3.org/TR/css-typed-om-1/
-
 </script>
