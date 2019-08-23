@@ -1,0 +1,47 @@
+<style>
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .foo {
+        background: linear-gradient(deeppink, orange);
+        width: 30rem;
+        height: 20rem;
+        -webkit-mask-image: paint(scoop-border);
+        mask-image: paint(scoop-border);
+        --scoop-border-radius: 5rem;
+    }
+</style>
+
+<div class="foo"></div>
+
+<script>
+    // CSS Paint API
+
+    // Register custom property so that it's value can be read in worklet
+    CSS.registerProperty({
+        name: '--scoop-border-radius',
+        syntax: '<length-percentage>',
+        inherits: false,
+        initialValue: '0'
+    })
+
+    // Register paint worklet for scoop borders
+    CSS.paintWorklet.addModule('./worklets/scoop-border.js');
+
+    // More info:
+    // https://developers.google.com/web/updates/2018/01/paintapi
+    // https://ishoudinireadyyet.com/
+    // https://github.com/GoogleChromeLabs/css-paint-polyfill
+    // https://css-houdini.rocks/corner-shape
+    // https://googlechromelabs.github.io/houdini-samples/paint-worklet/qr-code/
+
+    // Browser support:
+    // - Chrome
+    // - Opera
+    // - Intent to implement in Firefox
+    // - In development 
+    // - Not Edge
+</script>
