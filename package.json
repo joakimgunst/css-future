@@ -1,0 +1,17 @@
+{
+  "name": "css-future",
+  "version": "1.0.0",
+  "description": "Demos of upcoming CSS technologies",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joakimgunst/css-future.git"
+  },
+  "scripts": {
+    "start": "serve public"
+  },
+  "author": "Joakim Gunst",
+  "license": "ISC",
+  "devDependencies": {
+    "serve": "^11.1.0"
+  }
+}
