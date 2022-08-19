@@ -12,6 +12,6 @@
   "author": "Joakim Gunst",
   "license": "ISC",
   "devDependencies": {
-    "serve": "^12.0.0"
+    "serve": "12.0.0"
   }
 }
